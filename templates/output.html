@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Outputs the locations where the user could visit -->
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-W8174VSSZB"
+    ></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4992118254778524"
+     crossorigin="anonymous"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-W8174VSSZB");
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Surround Search</title>
+    <style type="text/css">
+      .button {
+        background-color: #4e5869;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        opacity: 0.6;
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 12px;
+      }
+      .button:hover {
+        opacity: 1;
+      }
+      table.dataframe,
+      .dataframe th,
+      .dataframe td {
+        border: none;
+        border-bottom: 1px solid #c8c8c8;
+        border-collapse: collapse;
+        text-align: left;
+        padding: 10px;
+        margin-bottom: 40px;
+        font-size: 0.9em;
+      }
+      tr:hover {
+        background-color: #a9a9a9;
+      }
+    </style>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.global/a17536a9-0ff9-4868-9414-b36d57d8246e/logo.png?v=1652072975235"
+    />
+    <script>
+      if (location.protocol != "https:") {
+        location.href =
+          "https:" +
+          window.location.href.substring(window.location.protocol.length);
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='src/css/common.css') }}"
+    />
+  </head>
+  <div class="page">
+    <body>
+      <center>
+        <div>
+          <img
+            src="https://cdn.glitch.global/a17536a9-0ff9-4868-9414-b36d57d8246e/logo.png?v=1652072975235"
+            align="middle"
+          />
+        </div>
+      </center>
+      <center>
+        Here are your Recommended Locations to Visit {% for table in tables%}
+        {{titles[loop.index]}} {{ table|safe }} {% endfor %}
+        <label>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <a href="/">
+          <form action="/">
+            <input
+              class="btn search_div button"
+              type="button"
+              value="Search Again"
+            />
+          </form>
+        </a>
+      </center>
+    </body>
+    <label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </label>
+  </div>
+</html>
